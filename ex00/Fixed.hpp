@@ -5,7 +5,7 @@
 
 class Fixed {
 	private:
-		int					_value;
+		int					_rawBits;
 		static const int	_fractBits = 8;
 	public:
 		Fixed( void );

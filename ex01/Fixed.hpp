@@ -6,12 +6,12 @@
 
 class Fixed {
 	private:
-		int					_value;
+		int					_rawBits;
 		static const int	_fractBits = 8;
 	public:
 		Fixed( void );
-		Fixed( const int value );
-		Fixed( const float value );
+		Fixed( const int rawBits );
+		Fixed( const float rawBits );
 		Fixed( const Fixed& other );
 		Fixed& operator=( const Fixed& other );
 		~Fixed( void );
@@ -22,6 +22,6 @@ class Fixed {
 		int		getRawBits( void ) const;
 };
 
-std::ostream & operator<<( std::ostream & o, Fixed const & i );
+std::ostream& operator<<( std::ostream& o, Fixed const& i );
 
 #endif
